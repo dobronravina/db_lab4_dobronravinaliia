@@ -41,7 +41,7 @@ def visualize_result(result, plot_type):
         values = [row[1] for row in result]
 
         plt.pie(values, labels=labels, autopct='%1.1f%%')
-        plt.title('Кругова діаграма')
+        plt.title('Продажі')
         plt.show()
 
     elif plot_type == 'bar':
@@ -52,7 +52,7 @@ def visualize_result(result, plot_type):
         plt.bar(labels, values)
         plt.xlabel('Назва книги')
         plt.ylabel('Продажі')
-        plt.title('Стовпчикова діаграма')
+        plt.title('Залежність продажів від жанру')
         plt.show()
 
     elif plot_type == 'line':
@@ -61,9 +61,9 @@ def visualize_result(result, plot_type):
         values = [row[1] for row in result]
 
         plt.plot(labels, values, marker='o')
-        plt.xlabel('Жанр')
-        plt.ylabel('Продажі')
-        plt.title('Графік')
+        plt.xlabel('Назви книг')
+        plt.ylabel('Кількість книг')
+        plt.title('Кількість книг у жанрі')
         plt.show()
 
 # Виконання запитів та виведення результатів
